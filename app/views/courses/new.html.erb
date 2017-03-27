@@ -1,0 +1,16 @@
+<h1>New Course</h1>
+
+<%= render 'form', course: @course %>
+
+<%= link_to 'Back', courses_path %>
+
+<h1> Teachers </h1>
+<tbody>
+    <% @teachers.each do |teacher| %>
+      <tr>
+      	<h4> ---------------------</h4>
+      	<h4><%= "Nombre:  #{teacher.first_name} " %></h4>
+     	<h4><%= "Id:  #{teacher.id} " %></h4>  
+      </tr>
+    <% end %>
+  </tbody>

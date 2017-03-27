@@ -1,0 +1,15 @@
+<h1> Courses : </h1>
+
+
+<h1> Persons : </h1>
+
+<tbody>
+    <% @persons.each do |person| %>
+      <tr>
+      	<h4> ---------------------</h4>
+      	<h4><%= "Nombre:  #{person.first_name} " %></h4>
+     	<h4><%= "Id:  #{person.id} " %></h4>  
+     	<%= link_to "Purchase", { :controller => :courses, :action => "add_people" } %>
+      </tr>
+    <% end %>
+  </tbody>
